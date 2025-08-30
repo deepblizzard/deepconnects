@@ -145,3 +145,4 @@ async function ProfileLayout({ children, params: { username } }: Props) {
 }
 
 export default ProfileLayout;
+
