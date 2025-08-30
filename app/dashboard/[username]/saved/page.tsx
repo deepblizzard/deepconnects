@@ -7,7 +7,10 @@ async function SavedPosts({
   params: { username: string };
 }) {
   const savedPosts = await fetchSavedPostsByUsername(username);
-  const posts = savedPosts?.map((savedPost) => savedPost.post);
+
+  const posts = savedPosts?.map(
+    (savedPost: { post: any }) => savedPost.post
+  );
 
   return <PostsGrid posts={posts} />;
 }
